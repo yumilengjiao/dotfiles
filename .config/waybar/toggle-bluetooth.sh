@@ -1,8 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env nu
 
-if [ "$(bluetoothctl show | grep "Powered: yes" | wc -c)" -eq 0 ]
-then
+if not (bluetoothctl show | str contains "Powered: yes") {
   bluetoothctl power on
-else
+} else {
   bluetoothctl power off
-fi
+}
