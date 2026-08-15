@@ -1,7 +1,13 @@
+# other module init
+source "~/.cargo/env.nu"
+#env
+$env.EDITOR = "nvim"
+$env.config.show_banner = false
+# alias
 alias v = nvim
 alias lg = lazygit
 alias ldk = lazydocker
-
+# define commands 
 def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
 	^yazi ...$args --cwd-file $tmp
@@ -11,3 +17,5 @@ def --env y [...args] {
 	}
 	rm -fp $tmp
 }
+# excute
+fastfetch
