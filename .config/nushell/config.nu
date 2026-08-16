@@ -2,6 +2,7 @@
 source "~/.cargo/env.nu"
 #env
 $env.EDITOR = "nvim"
+$env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 # alias
 alias v = nvim
