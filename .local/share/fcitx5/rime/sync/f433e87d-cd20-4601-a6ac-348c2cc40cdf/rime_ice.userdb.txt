@@ -1,0 +1,44 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.17.0
+#@/tick	48
+#@/user_id	f433e87d-cd20-4601-a6ac-348c2cc40cdf
+a 	啊	c=1 d=0.923116 t=48
+an 	暗	c=0 d=0.0900325 t=48
+an liang se 	暗亮色	c=2 d=1.8466 t=48
+bai wen 	白文	c=1 d=0.970446 t=48
+de 	的	c=4 d=3.774 t=48
+gao 	搞	c=1 d=0.995012 t=48
+gui fu 	鬼父	c=2 d=1.99501 t=48
+ke yi le 	可以了	c=2 d=1.98511 t=42
+lai 	来	c=1 d=0.97531 t=48
+le 	了	c=1 d=0.980199 t=48
+liang se 	亮色	c=0 d=0.0900325 t=48
+liu lan qi 	浏览器	c=1 d=0.995012 t=48
+ni bu yao 	你不要	c=1 d=1 t=48
+ni hao 	你好	c=2 d=1.956 t=48
+ni ye shi 	你也是	c=0 d=0.0960789 t=48
+nong 	弄	c=1 d=0.965605 t=48
+qie huan 	切换	c=1 d=0.918512 t=48
+qu 	去	c=1 d=0.960789 t=48
+qu fen 	区分	c=1 d=0.946485 t=48
+shou gou 	收购	c=1 d=1 t=44
+shou gou le 	受够了	c=1 d=1 t=45
+suan le 	算了	c=1 d=0.960789 t=48
+wei shen me 	为什么	c=1 d=0.980199 t=48
+wen 	问	c=0 d=0.0960789 t=48
+wen ni ye shi 	问你也是	c=1 d=0.965605 t=48
+wo 	我	c=3 d=2.80869 t=48
+wo wen 	我问	c=1 d=0.88692 t=48
+wo xiang 	我想	c=2 d=1.85781 t=48
+wo xiang wen yi xia 	我想问一下	c=1 d=1 t=40
+wo yao 	我要	c=1 d=0.955997 t=48
+wo zhen shi 	我真是	c=1 d=1 t=43
+xiao he shu ru fa 	小鹤输入法	c=1 d=1 t=46
+xing le 	行了	c=2 d=1.89771 t=48
+yi xia 	一下	c=1 d=0.891366 t=48
+you 	有	c=1 d=0.937067 t=48
+zen me 	怎么	c=2 d=1.78329 t=48
+zhong yu 	终于	c=1 d=1 t=41
+zhu ti 	主题	c=3 d=2.62654 t=48
