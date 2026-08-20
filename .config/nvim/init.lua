@@ -39,6 +39,7 @@ do
   --  runs the appropriate build command for that plugin if necessary.
   --
   -- See `:help vim.pack-events`
+  -- 这里维护了一份白名单，用于对特定需要编译的插进进行额外工作
   vim.api.nvim_create_autocmd('PackChanged', {
     callback = function(ev)
       local name = ev.data.spec.name
