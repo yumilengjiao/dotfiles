@@ -1,4 +1,4 @@
-local utils = require("utils")
+local utils = require('utils')
 -- Highlight todo, notes, etc in comments
-vim.pack.add({ utils.gh("folke/todo-comments.nvim") })
-require("todo-comments").setup({ signs = false })
+vim.pack.add({ utils.gh('folke/todo-comments.nvim') })
+require('todo-comments').setup({ signs = false })

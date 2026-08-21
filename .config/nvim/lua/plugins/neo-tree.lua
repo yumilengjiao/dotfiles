@@ -3,9 +3,9 @@ local utils = require('utils')
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 vim.pack.add({
-	utils.gh 'nvim-neo-tree/neo-tree.nvim',
-	utils.gh 'nvim-lua/plenary.nvim',
-	utils.gh 'MunifTanjim/nui.nvim',
+	utils.gh('nvim-neo-tree/neo-tree.nvim'),
+	utils.gh('nvim-lua/plenary.nvim'),
+	utils.gh('MunifTanjim/nui.nvim'),
 })
 
 vim.keymap.set('n', '\\', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })

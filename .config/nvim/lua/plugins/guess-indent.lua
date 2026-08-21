@@ -1,4 +1,4 @@
-local utils = require("utils.lua")
+local utils = require("utils")
 
-vim.pack.add(utils.gh("guess-indent.nvim"))
+vim.pack.add({ utils.gh("guess-indent.nvim") })
 require("guess-indent").setup({})

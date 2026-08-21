@@ -1,4 +1,4 @@
-local utils = require('utils.lua')
+local utils = require('utils')
 -- [[ Configure Treesitter ]]
 --  Used to highlight, edit, and navigate code
 --

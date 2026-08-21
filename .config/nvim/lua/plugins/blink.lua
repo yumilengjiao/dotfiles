@@ -1,7 +1,7 @@
-local utils = require('utils')
+local utils = require("utils")
 -- [[ Autocomplete Engine ]]
-vim.pack.add({ { src = utils.gh('saghen/blink.cmp'), version = vim.version.range('1.*') } })
-require('blink.cmp').setup({
+vim.pack.add({ { src = utils.gh("saghen/blink.cmp"), version = vim.version.range("1.*") } })
+require("blink.cmp").setup({
 	keymap = {
 		-- 'default' (recommended) for mappings similar to built-in completions
 		--   <c-y> to accept ([y]es) the completion.
@@ -24,7 +24,7 @@ require('blink.cmp').setup({
 		-- <c-k>: Toggle signature help
 		--
 		-- See `:help blink-cmp-config-keymap` for defining your own keymap
-		preset = 'default',
+		preset = "default",
 
 		-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 		--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -33,7 +33,7 @@ require('blink.cmp').setup({
 	appearance = {
 		-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 		-- Adjusts spacing to ensure icons are aligned
-		nerd_font_variant = 'mono',
+		nerd_font_variant = "mono",
 	},
 
 	completion = {
@@ -43,10 +43,10 @@ require('blink.cmp').setup({
 	},
 
 	sources = {
-		default = { 'lsp', 'path', 'snippets' },
+		default = { "lsp", "path", "snippets" },
 	},
 
-	snippets = { preset = 'luasnip' },
+	snippets = { preset = "luasnip" },
 
 	-- Blink.cmp includes an optional, recommended rust fuzzy matcher,
 	-- which automatically downloads a prebuilt binary when enabled.
@@ -55,7 +55,7 @@ require('blink.cmp').setup({
 	-- the rust implementation via `'prefer_rust_with_warning'`
 	--
 	-- See `:help blink-cmp-config-fuzzy` for more information
-	fuzzy = { implementation = 'lua' },
+	fuzzy = { implementation = "lua" },
 
 	-- Shows a signature help window while you type arguments for a function
 	signature = { enabled = true },
