@@ -32,6 +32,8 @@ do
 				if client.workspace_folders then
 					local path = client.workspace_folders[1].name
 					if
+						-- 这里就是在说，如果项目根目录不是我的nvim配置目录，而且项目下面没有.luarc.json和.luarc.jsonc()
+						-- 才往下走使用我自己的lua语言服务器配置，否则用项目配置(类似tsconfig)
 						path ~= vim.fn.stdpath('config')
 						and (
 							vim.uv.fs_stat(path .. '/.luarc.json')
