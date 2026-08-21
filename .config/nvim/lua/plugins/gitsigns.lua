@@ -1,4 +1,4 @@
-local utils = require("config.utils")
+local utils = require("utils")
 
 vim.pack.add({ utils.gh("lewis6991/gitsigns.nvim") })
 require("gitsigns").setup({

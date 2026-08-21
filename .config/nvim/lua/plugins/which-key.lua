@@ -1,4 +1,4 @@
-local utils = require("custom.utils")
+local utils = require("utils")
 -- Useful plugin to show you pending keybinds.
 vim.pack.add({ utils.gh("folke/which-key.nvim") })
 require("which-key").setup({

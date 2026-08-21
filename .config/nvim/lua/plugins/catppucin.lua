@@ -1,4 +1,4 @@
-local utils = require("custom.utils")
+local utils = require("utils")
 vim.pack.add({ utils.gh("catppuccin/nvim") })
 require("catppuccin").setup({
 	flavour = "macchiato",

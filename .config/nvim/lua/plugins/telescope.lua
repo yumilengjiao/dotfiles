@@ -1,4 +1,4 @@
-local utils = require("custom.utils")
+local utils = require("utils")
 ---@type (string|vim.pack.Spec)[]
 local telescope_plugins = {
 	utils.gh("nvim-lua/plenary.nvim"),

@@ -1,4 +1,4 @@
-local utils = require('custom.utils')
+local utils = require('utils')
 ---@type table<string, vim.lsp.Config>
 local servers = {
 	-- clangd = {},

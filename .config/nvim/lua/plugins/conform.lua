@@ -1,4 +1,4 @@
-local utils = require('custom.utils')
+local utils = require('utils')
 -- [[ Formatting ]]
 vim.pack.add({ utils.gh('stevearc/conform.nvim') })
 require('conform').setup({
