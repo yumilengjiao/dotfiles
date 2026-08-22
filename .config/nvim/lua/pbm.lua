@@ -1,7 +1,7 @@
 ---@class PluginBlock
 ---@field name string
 ---@field init function
----@field dependencies string[]
+---@field dependencies string[] | nil
 ---@field options table | nil
 
 ---@class Node

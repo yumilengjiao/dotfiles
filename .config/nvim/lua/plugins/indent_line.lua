@@ -1,7 +1,20 @@
-local utils = require("utils")
+-- indent-blankline.lua
+--
 -- Add indentation guides even on blank lines
-
--- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help ibl`
-vim.pack.add({ utils.gh("lukas-reineke/indent-blankline.nvim") })
-require("ibl").setup({})
+
+local PBM = require('pbm')
+local pluginName = 'lukas-reineke/indent-blankline.nvim'
+
+local function init()
+	local utils = require('utils')
+	vim.pack.add({ utils.gh(pluginName) })
+	require('ibl').setup({})
+end
+
+PBM:register({
+	name = pluginName,
+	init = init,
+	dependencies = nil,
+	options = nil,
+})

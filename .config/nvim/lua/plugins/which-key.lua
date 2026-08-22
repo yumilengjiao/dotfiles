@@ -1,15 +1,31 @@
-local utils = require('utils')
+-- which-key.lua
+--
 -- Useful plugin to show you pending keybinds.
-vim.pack.add({ utils.gh('folke/which-key.nvim') })
-require('which-key').setup({
-	-- Delay between pressing a key and opening which-key (milliseconds)
-	delay = 0,
-	icons = { mappings = vim.g.have_nerd_font },
-	-- Document existing key chains
-	spec = {
-		{ '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
-		{ '<leader>t', group = '[T]oggle' },
-		{ '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
-		{ 'gr', group = 'LSP Actions', mode = { 'n' } },
-	},
+
+local PBM = require('pbm')
+local pluginName = 'folke/which-key.nvim'
+
+local function init()
+	local utils = require('utils')
+	vim.pack.add({ utils.gh(pluginName) })
+
+	require('which-key').setup({
+		-- Delay between pressing a key and opening which-key (milliseconds)
+		delay = 0,
+		icons = { mappings = vim.g.have_nerd_font },
+		-- Document existing key chains
+		spec = {
+			{ '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
+			{ '<leader>t', group = '[T]oggle' },
+			{ '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
+			{ 'gr', group = 'LSP Actions', mode = { 'n' } },
+		},
+	})
+end
+
+PBM:register({
+	name = pluginName,
+	init = init,
+	dependencies = nil,
+	options = nil,
 })

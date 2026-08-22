@@ -1,17 +1,18 @@
 vim.loader.enable()
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 vim.o.number = true
-vim.o.mouse = "a"
+vim.o.relativenumber = true
+vim.o.mouse = 'a'
 
 vim.o.showmode = false
 
 vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
+	vim.o.clipboard = 'unnamedplus'
 end)
 
 vim.o.breakindent = true
@@ -21,10 +22,10 @@ vim.o.undofile = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.o.signcolumn = "yes"
+vim.o.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
+vim.o.updatetime = 100
 
 -- Decrease mapped sequence wait time
 vim.o.timeoutlen = 300
@@ -33,10 +34,11 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
-vim.o.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.o.list = false
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.fillchars = { eob = ' ' } -- 用空格替代 ~ 符号
 
-vim.o.inccommand = "split"
+vim.o.inccommand = 'split'
 
 vim.o.cursorline = true
 
