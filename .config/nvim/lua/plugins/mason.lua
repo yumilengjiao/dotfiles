@@ -11,7 +11,7 @@ local function init()
 		-- clangd = {},
 		-- gopls = {},
 		-- pyright = {},
-		-- rust_analyzer = {},
+		rust_analyzer = {},
 		lua_ls = {
 			on_init = function(client)
 				client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)

@@ -14,13 +14,15 @@ local function init()
 		utils.gh('MunifTanjim/nui.nvim'),
 	})
 
-	vim.keymap.set('n', '<leader>e', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
+	vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle NeoTree', silent = true })
 
 	require('neo-tree').setup({
 		filesystem = {
 			window = {
 				mappings = {
 					['<leader>e'] = 'close_window',
+					['l'] = 'open',
+					['h'] = 'close_node',
 				},
 			},
 		},
