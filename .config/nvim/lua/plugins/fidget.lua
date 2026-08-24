@@ -8,6 +8,7 @@ local pluginName = 'j-hui/fidget.nvim'
 local function init()
 	local utils = require('utils')
 	vim.pack.add({ utils.gh(pluginName) })
+	require('fidget').setup({})
 end
 
 PBM:register({
