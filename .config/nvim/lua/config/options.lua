@@ -37,6 +37,8 @@ vim.o.splitbelow = true
 vim.o.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.fillchars = { eob = ' ' } -- 用空格替代 ~ 符号
+vim.opt.guifont = 'JetBrainsMono Nerd Font:h14'
+vim.g.neovide_opacity = 0.85
 
 vim.o.inccommand = 'split'
 

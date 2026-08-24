@@ -1,5 +1,5 @@
 local PBM = require('pbm')
-local pluginName = 'mcauley-penney/visual-whitespace'
+local pluginName = 'mcauley-penney/visual-whitespace.nvim'
 local function init()
 	local utils = require('utils')
 	vim.pack.add({ utils.gh(pluginName) }, { load = false })
