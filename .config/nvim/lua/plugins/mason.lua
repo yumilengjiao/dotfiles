@@ -8,9 +8,9 @@ local function init()
 
 	---@type table<string, vim.lsp.Config>
 	local servers = {
-		-- clangd = {},
-		-- gopls = {},
-		-- pyright = {},
+		clangd = {},
+		gopls = {},
+		pyright = {},
 		rust_analyzer = {},
 		lua_ls = {
 			on_init = function(client)
