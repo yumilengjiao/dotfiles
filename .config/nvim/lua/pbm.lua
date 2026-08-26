@@ -23,10 +23,10 @@ local PluginBlockManager = {
 
 function PluginBlockManager:run()
 	for _, v in pairs(PluginBlockManager.pbCollection) do
-		self:insertNode(v)
+		self:__insertNode(v)
 	end
 	for _, v in pairs(PluginBlockManager.nodes) do
-		self:initPlugins(v.name)
+		self:__initPlugins(v.name)
 	end
 end
 
@@ -37,7 +37,7 @@ function PluginBlockManager:register(pluginBlock)
 end
 
 ---@param newPB PluginBlock
-function PluginBlockManager:insertNode(newPB)
+function PluginBlockManager:__insertNode(newPB)
 	---@type Node[]
 	local dependencies = {}
 	if newPB.dependencies ~= nil and #newPB.dependencies > 0 then
@@ -45,7 +45,7 @@ function PluginBlockManager:insertNode(newPB)
 		for _, name in ipairs(newPB.dependencies) do
 			local node = PluginBlockManager.nodes[name]
 			if node == nil then
-				node = PluginBlockManager:insertNode(PluginBlockManager.pbCollection[name])
+				node = PluginBlockManager:__insertNode(PluginBlockManager.pbCollection[name])
 			end
 			table.insert(dependencies, node)
 		end
@@ -63,7 +63,7 @@ function PluginBlockManager:insertNode(newPB)
 end
 
 ---@param name string 插件名称/id
-function PluginBlockManager:initPlugins(name)
+function PluginBlockManager:__initPlugins(name)
 	if PluginBlockManager.nodesInited[name] then
 		return
 	end
@@ -71,7 +71,7 @@ function PluginBlockManager:initPlugins(name)
 	local node = PluginBlockManager.nodes[name]
 	if node.dependencies ~= nil and #node.dependencies > 0 then
 		for _, v in ipairs(node.dependencies) do
-			PluginBlockManager:initPlugins(v.name)
+			PluginBlockManager:__initPlugins(v.name)
 		end
 	end
 
