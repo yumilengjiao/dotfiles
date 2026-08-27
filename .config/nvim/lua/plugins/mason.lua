@@ -77,6 +77,8 @@ local function init()
 	vim.list_extend(ensure_installed, {
 		-- You can add other tools here that you want Mason to install
 		'stylua',
+		'markdownlint',
+		'tree-sitter-cli',
 	})
 	require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
