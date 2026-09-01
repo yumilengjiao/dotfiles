@@ -11,3 +11,4 @@
 - niri
 - nushell
 - nvim
+- wine
