@@ -97,6 +97,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+vim.api.nvim_create_autocmd('LspNotify', {
+	callback = function(args)
+		if args.data.method == 'textDocument/didOpen' or args.data.method == 'textDocument/didChange' then
+			local client = vim.lsp.get_client_by_id(args.data.client_id)
+			if client and client:supports_method('textDocument/inlayHint', args.buf) then
+				vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+			end
+		end
+	end,
+})
+
 vim.api.nvim_create_autocmd('ColorScheme', {
 	callback = function()
 		vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
