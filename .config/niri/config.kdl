@@ -475,6 +475,8 @@ binds {
     Mod+P              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+N         { move-column-to-workspace-down; }
+    Mod+Ctrl+P         { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
     Mod+Ctrl+I         { move-column-to-workspace-up; }
 
