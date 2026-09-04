@@ -1,5 +1,6 @@
 # other module init
-source "~/.cargo/env.nu"
+source '~/.cargo/env.nu'
+source './catppuccin-mocha.nu'
 #env
 $env.EDITOR = "nvim"
 $env.config.buffer_editor = "nvim"
