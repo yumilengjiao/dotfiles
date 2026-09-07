@@ -267,6 +267,8 @@ layout {
         top 0
         bottom 2
     }
+    // 单列窗口永远居中展示
+    always-center-single-column
 }
 
 // Add lines like this to spawn processes at startup.
