@@ -13,6 +13,7 @@ local function init()
 		pyright = {},
 		rust_analyzer = {},
 		taplo = {}, -- toml lsp
+		zls = {}, -- lsp for zig
 		lua_ls = {
 			on_init = function(client)
 				client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
