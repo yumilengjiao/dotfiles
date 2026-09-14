@@ -7,6 +7,7 @@
 - fastfetch
 - kitty
 - lazygit
+- lazydocker
 - git
 - niri
 - nushell
