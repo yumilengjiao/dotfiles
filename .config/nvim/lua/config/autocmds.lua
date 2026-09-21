@@ -74,10 +74,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		--  Symbols are things like variables, functions, types, etc.
 		map('gO', builtin.lsp_document_symbols, '[D]ocument Symbols')
 
-		-- Fuzzy find all the symbols in your current workspace.
-		--  Similar to document symbols, except searches over your entire project.
-		map('<leader>ws', builtin.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-
 		-- Rename the variable under your cursor.
 		--  Most Language Servers support renaming across files, etc.
 		map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
