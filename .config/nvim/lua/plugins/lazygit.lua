@@ -5,7 +5,7 @@ local function init()
 	local utils = require('utils')
 	vim.pack.add({ utils.gh(pluginName) })
 	require('telescope').load_extension('lazygit')
-	vim.keymap.set('n', '<leader>lg', '<cmd>LazyGit<cr>')
+	vim.keymap.set('n', '<leader>lg', '<cmd>LazyGit<cr>', { desc = '[L]azy git' })
 end
 
 PBM:register({
