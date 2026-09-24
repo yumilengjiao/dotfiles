@@ -5,6 +5,7 @@ source './catppuccin-mocha.nu'
 $env.EDITOR = "nvim"
 $env.config.buffer_editor = "nvim"
 $env.MANPAGER = "sh -c 'col -bx | bat -l man -p'"
+$env.MANROFFOPT = "-c"
 $env.config.show_banner = false
 # alias
 alias v = nvim
