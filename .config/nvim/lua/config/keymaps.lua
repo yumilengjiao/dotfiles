@@ -24,43 +24,6 @@ vim.diagnostic.config({
 	},
 })
 
--- Diagnostics
-vim.keymap.set('n', '<leader>cl', vim.diagnostic.setloclist, {
-	desc = 'Diagnostic [L]ist',
-})
-
-vim.keymap.set('n', '<leader>cq', vim.diagnostic.setqflist, {
-	desc = 'Diagnostic [Q]uickfix',
-})
-
-vim.keymap.set('n', '<leader>co', vim.diagnostic.open_float, {
-	desc = 'Diagnostic [O]pen',
-})
-
-vim.keymap.set('n', '<leader>cn', function()
-	vim.diagnostic.jump({ count = 1 })
-end, {
-	desc = 'Diagnostic [N]ext',
-})
-
-vim.keymap.set('n', '<leader>cp', function()
-	vim.diagnostic.jump({ count = -1 })
-end, {
-	desc = 'Diagnostic [P]revious',
-})
-
-vim.keymap.set('n', '<leader>cf', function()
-	vim.diagnostic.jump({ count = -1, wrap = false })
-end, {
-	desc = 'Diagnostic [F]irst',
-})
-
-vim.keymap.set('n', '<leader>cL', function()
-	vim.diagnostic.jump({ count = 1, wrap = false })
-end, {
-	desc = 'Diagnostic [L]ast',
-})
-
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
