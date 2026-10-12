@@ -22,7 +22,7 @@ local function init()
 			{ '<leader>d', group = '[D]ebug' },
 			{ '<leader>l', group = '[L]azy' },
 			{ '<leader>c', group = '[C]ode' },
-			{ 'gr', group = 'LSP Actions', mode = { 'n' } },
+			{ 'gl', group = 'LSP Actions', mode = { 'n' } },
 		},
 	})
 end
