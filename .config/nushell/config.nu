@@ -7,6 +7,21 @@ $env.config.buffer_editor = "nvim"
 $env.MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 $env.MANROFFOPT = "-c"
 $env.config.show_banner = false
+$env.config.menus = (
+    $env.config.menus
+    | where name != history_menu
+    | append {
+        name: history_menu
+        only_buffer_difference: false
+        marker: "? "
+        type: { layout: list page_size: 10 }
+        style: {
+            text: green
+            selected_text: green_reverse
+            description_text: yellow
+        }
+    }
+)
 # alias
 alias v = nvim
 alias lg = lazygit
