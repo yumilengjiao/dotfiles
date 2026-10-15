@@ -3,6 +3,7 @@ source '~/.cargo/env.nu'
 source './catppuccin-mocha.nu'
 #env
 $env.EDITOR = "nvim"
+$env.PATH = $env.PATH | append "~/.bun/bin/"
 $env.config.buffer_editor = "nvim"
 $env.MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 $env.MANROFFOPT = "-c"
