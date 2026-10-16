@@ -25,6 +25,9 @@ vim.diagnostic.config({
 })
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- 文档注释
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<Leader>cn', ":lua require('neogen').generate()<CR>", opts)
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
