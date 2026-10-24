@@ -60,6 +60,7 @@ local function init()
 		ensure_installed = {
 			-- Update this to ensure that you have the debuggers for the langs you want
 			'delve',
+			'codelldb',
 		},
 	})
 
@@ -116,6 +117,6 @@ end
 PBM:register({
 	name = pluginName,
 	init = init,
-	dependencies = nil,
+	dependencies = { 'lsp' }, -- Mason must add its bin directory before DAP adapters are resolved.
 	options = nil,
 })

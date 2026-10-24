@@ -11,7 +11,7 @@ local function init()
 		clangd = {},
 		gopls = {},
 		pyright = {},
-		rust_analyzer = {},
+		-- Rust LSP is managed by rustaceanvim (see rust.lua).
 		taplo = {}, -- toml lsp
 		zls = {}, -- lsp for zig
 		lua_ls = {
@@ -65,7 +65,9 @@ local function init()
 
 	-- Translates between nvim-lspconfig server names and mason.nvim package names (e.g. lua_ls <-> lua-language-server)
 	require('mason-lspconfig').setup({
-		automatic_enable = true, -- Change this to true if you want to automatically enable servers that are installed manually (e.g. via :Mason / :MasonInstall)
+		automatic_enable = {
+			exclude = { 'rust_analyzer' }, -- Avoid starting a second Rust LSP client.
+		},
 	})
 
 	-- Ensure the servers and tools above are installed
