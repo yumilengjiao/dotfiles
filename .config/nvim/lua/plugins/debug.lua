@@ -88,17 +88,38 @@ local function init()
 		},
 	})
 
-	-- Change breakpoint icons
-	-- vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
-	-- vim.api.nvim_set_hl(0, 'DapStop', { fg = '#ffcc00' })
-	-- local breakpoint_icons = vim.g.have_nerd_font
-	--     and { Breakpoint = '', BreakpointCondition = '', BreakpointRejected = '', LogPoint = '', Stopped = '' }
-	--   or { Breakpoint = '●', BreakpointCondition = '⊜', BreakpointRejected = '⊘', LogPoint = '◆', Stopped = '⭔' }
-	-- for type, icon in pairs(breakpoint_icons) do
-	--   local tp = 'Dap' .. type
-	--   local hl = (type == 'Stopped') and 'DapStop' or 'DapBreak'
-	--   vim.fn.sign_define(tp, { text = icon, texthl = hl, numhl = hl })
-	-- end
+	-- High-contrast breakpoint markers and the current execution line.
+	local function set_debug_highlights()
+		vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#ff0000', bold = true })
+		vim.api.nvim_set_hl(0, 'DapBreakpointCondition', { fg = '#ff00ff', bold = true })
+		vim.api.nvim_set_hl(0, 'DapBreakpointRejected', { fg = '#ff8800', bold = true })
+		vim.api.nvim_set_hl(0, 'DapLogPoint', { fg = '#00ffff', bold = true })
+		vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#000000', bg = '#ffff00', bold = true })
+		vim.api.nvim_set_hl(0, 'DapStoppedLine', { fg = '#000000', bg = '#ffff00', bold = true })
+	end
+
+	set_debug_highlights()
+	vim.api.nvim_create_autocmd('ColorScheme', {
+		group = vim.api.nvim_create_augroup('dotfiles-dap-highlights', { clear = true }),
+		callback = set_debug_highlights,
+	})
+
+	local breakpoint_icons = {
+		Breakpoint = '●',
+		BreakpointCondition = '◆',
+		BreakpointRejected = '⊘',
+		LogPoint = '◆',
+		Stopped = '▶',
+	}
+	for kind, icon in pairs(breakpoint_icons) do
+		local name = 'Dap' .. kind
+		vim.fn.sign_define(name, {
+			text = icon,
+			texthl = name,
+			numhl = name,
+			linehl = kind == 'Stopped' and 'DapStoppedLine' or '',
+		})
+	end
 
 	dap.listeners.after.event_initialized['dapui_config'] = dapui.open
 	dap.listeners.before.event_terminated['dapui_config'] = dapui.close
