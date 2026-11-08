@@ -39,6 +39,6 @@ end
 PBM:register({
 	name = pluginName,
 	init = init,
-	dependencies = { 'lsp', 'mfussenegger/nvim-dap' },
+	dependencies = { 'mason', 'mfussenegger/nvim-dap' },
 	options = nil,
 })

@@ -1,7 +1,7 @@
 -- lsp.lua
 
 local PBM = require('pbm')
-local pluginName = 'lsp'
+local pluginName = 'mason'
 
 local function init()
 	local utils = require('utils')

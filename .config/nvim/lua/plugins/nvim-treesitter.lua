@@ -79,6 +79,8 @@ end
 PBM:register({
 	name = pluginName,
 	init = init,
-	dependencies = nil,
+	dependencies = {
+		'mason',
+	},
 	options = nil,
 })

@@ -141,6 +141,6 @@ end
 PBM:register({
 	name = pluginName,
 	init = init,
-	dependencies = { 'lsp' }, -- Mason must add its bin directory before DAP adapters are resolved.
+	dependencies = { 'mason' }, -- Mason must add its bin directory before DAP adapters are resolved.
 	options = nil,
 })
