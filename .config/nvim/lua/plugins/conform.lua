@@ -29,8 +29,8 @@ local function init()
 		formatters_by_ft = {
 			lua = { 'stylua' },
 			rust = { 'rustfmt' },
-			-- Conform can also run multiple formatters sequentially
-			python = { 'isort', 'black' },
+			-- Organize imports, then format Python code with Ruff.
+			python = { 'ruff_organize_imports', 'ruff_format' },
 			--
 			c = { 'clang-format' },
 			-- You can use 'stop_after_first' to run the first available formatter from the list
