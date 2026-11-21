@@ -141,3 +141,12 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
 	end,
 })
+
+vim.api.nvim_create_autocmd('PackChanged', {
+	callback = function(ev)
+		local d = ev.data
+		if d.spec.name == 'jupynvim' and (d.kind == 'install' or d.kind == 'update') then
+			dofile(d.path .. '/lua/jupynvim/install.lua').run({ dir = d.path })
+		end
+	end,
+})
