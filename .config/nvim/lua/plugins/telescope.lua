@@ -44,6 +44,13 @@ local function init()
 	vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 	vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
 	vim.keymap.set({ 'n', 'v' }, '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+	-- Search beside the current source file, including hidden and ignored files.
+	vim.keymap.set('n', '<leader>sW', function()
+		builtin.grep_string({
+			cwd = vim.fn.expand('%:p:h'),
+			additional_args = { '--hidden', '--no-ignore' },
+		})
+	end, { desc = '[S]earch [W]ord in current source directory' })
 	vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 	vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 	vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
